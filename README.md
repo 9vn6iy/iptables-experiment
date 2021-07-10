@@ -57,6 +57,36 @@ git clone git@github.com:9vn6iy/iptables-experiment.git
 
 ## Contents
 
+### 1. iptables structure
+
+iptables并不是真正的防火墙，而是一个客户端代理，用户通过代理可以将用户自定义的安全规则执行到对应的安全框架中，
+例如netfilter。iptables位于用户空间，而netfilters位于内核空间。netfilter/iptables组成linux平台下的包过滤防火墙。
+
+iptables按照rules进行包过滤；规则一般的定义为“如果数据包头符合该要求，则这样处理这个数据包”。
+rules存储在kernel空间的信息包过滤表中，指定<source-address, dest-address, protocol, service-type...>
+
+当数据包与rule匹配时，iptables就根据规则所定义的方法处理数据包。数据包的匹配过程分为多个阶段：
+
+![packet matching location](./assets/figure_01.png)
+
+
+
+
+
+
+
+
+
+
+
+### 2. ipvs structure
+
+### 3. nftables structure 
+
+### 4. bpf and ebpf
+
+### 5. comparison
+
 ## References
 
 * [Linux Virtual Server for Scalable Network Services](http://www.linuxvirtualserver.org/ols/lvs.pdf)
