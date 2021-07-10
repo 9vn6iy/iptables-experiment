@@ -143,7 +143,6 @@ Linux Virtual Server由三层结构组成：Load balancer, Server pool, Backend 
 * 高可用性可以通过检测节点或守护进程失效并重新配置系统的方式提供，以便集群中的其余节点可以接管工作负载。
 * 通常情况下，我们会在load balancer中运行集群监控进程来对节点进行健康度检查，如果某个server node无法通过ICMP ping进行通信或者在某个特定时间段service没有响应，监视器就会在调度表中移除或禁用该server，这样load balancer便不会将新的连接调度到该server，并且该server node会被标记。
 
-
 #### Server Pool 
 
 包含实现真正服务的server集群
@@ -152,7 +151,7 @@ Linux Virtual Server由三层结构组成：Load balancer, Server pool, Backend 
 
 为所有server提供共享存储，使得server之间得以保持相同的content，并提供相同服务。
 
-[The 3-tier Architecture of Linux Virtual Server](./assets/figure_05.png)
+![The 3-tier Architecture of Linux Virtual Server](./assets/figure_05.png)
 
 
 ### 3. nftables structure 
@@ -160,6 +159,8 @@ Linux Virtual Server由三层结构组成：Load balancer, Server pool, Backend 
 ### 4. bpf and ebpf
 
 ### 5. comparison
+
+
 
 ## References
 
