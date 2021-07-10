@@ -2,10 +2,17 @@
 
 ## About The Project 
 
-Kubernetes provide three kinds of load-balancing strategys: namespace, iptables and ipvs. Namespace is too over-time and almost has been adapted, so most k8s are now using iptables and ipvs. Everyone knows that
-iptables has a very bad performance compared with ipvs, but why exactly? What's the difference between iptablse, ipvs, nftables and the new star - iptables-bpf? 
+Kubernetes provides three load balancing strategies: namespace, iptables and ipvs. Because the namespace is out of 
+date, most k8s clusters adope iptables and IPVS stragies. Almose everyone knows that iptables perform poorly 
+compared with IPVS, but why exactly? What's the difference between them? 
 
-This project is attemped to compare the difference between the architecture of iptables, ipvs, nftables and iptables-bpf, measure the performance loss and update/insert time increment among them. 
+Besides, linux kernel has changed the firewall rules management system from iptables to nftables, and since the 
+[bpf](https://www.kernel.org/doc/Documentation/networking/filter.txt) and [ebpf](https://ebpf.io/) project have been 
+in the air, there is also an iptables implementation of bpf 
+([iptables-bpf](https://github.com/mbertrone/bpf-iptables)). So we want to compare these techs as well. 
+
+This project is attemped to compare the difference between the architecture of iptables, ipvs, nftables and 
+iptables-bpf, measure the performance loss and update/insert time increment among them. 
 
 ### Built With 
 
