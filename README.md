@@ -3,7 +3,7 @@
 ## About The Project 
 
 Kubernetes provides three load balancing strategies: namespace, iptables and ipvs. Because the namespace is out of 
-date, most k8s clusters adope iptables and IPVS stragies. Almose everyone knows that iptables perform poorly 
+date, most k8s clusters adope iptables and IPVS strategies. Almose everyone knows that iptables perform poorly 
 compared with IPVS, but why exactly? What's the difference between them? 
 
 Besides, linux kernel has changed the firewall rules management system from iptables to nftables, and since the 
@@ -23,8 +23,24 @@ iptables-bpf, measure the performance loss and update/insert time increment amon
     * [bpf-iptables](https://github.com/mbertrone/bpf-iptables)
 
 * performance measurement tools
-    * [iperf3](https://iperf.fr/iperf-download.php) for bandwidth
+    * [iperf3](https://iperf.fr/iperf-download.php) for bandwidth measurement
     * simple shell scripts for update/insert time increment
+
+## Getting Started 
+
+### Experiment Environment
+
+| Environment  |       Version |
+|--------------+---------------|
+| CentOS Linux |      7.3.1611 |
+| Linux Kernel | 5.10.37-1.el7 |
+| iperf3       |          3.17 |
+| docker       |    18.06.3-ce |
+| iptables     |        1.4.21 |
+| ipvsadm      |          1.27 |
+| bash         |        4.2.46 |
+|              |               |
+
 
 #### ref 
 
