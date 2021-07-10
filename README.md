@@ -41,11 +41,26 @@ iptables-bpf, measure the performance loss and update/insert time increment amon
 | bash         |        4.2.46 |
 |              |               |
 
+### Installation
 
-#### ref 
+1. repare linux environment and docker 
 
+iptables, IPVS or nftables are free to download and use in all linux environments, so any distributions is all right.
+
+2. Clone the repo 
+
+```sh
+git clone git@github.com:9vn6iy/iptables-experiment.git
+```
+
+3. run testing scripts
+
+## Contents
+
+## References
+
+* [Linux Virtual Server for Scalable Network Services](http://www.linuxvirtualserver.org/ols/lvs.pdf)
 * [benchmarking-nftables](https://developers.redhat.com/blog/2017/04/11/benchmarking-nftables)
 * [optimizing-iptables-nft-large-ruleset-performance-in-user-space](https://developers.redhat.com/blog/2020/04/27/optimizing-iptables-nft-large-ruleset-performance-in-user-space)
-
 
 
